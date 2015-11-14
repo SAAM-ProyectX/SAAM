@@ -1,0 +1,127 @@
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ticketVentas{
+  height: 70%;
+  width: 30%;
+  background-color: #FFFFFF;
+  margin: 0;
+  margin-left: -5px;
+  margin-bottom: -6px;
+  display: inline-block;
+  padding: 0;
+}
+
+.productosVentas{
+  height: 432px;
+  width: 901px;
+  background-color: #a21318;
+  display: inline-block;
+  position: absolute;
+  margin: 0px;
+  padding-left: 25px;
+  padding-top: 25px;
+  -webkit-overflow-x: auto !important;
+  -moz-overflow-x: auto !important;
+  -o-overflow-x: auto !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+}
+.botonesVentas{
+  height: 30%;
+  width: 100%;
+  background-color: #000000;
+  display: block;
+}
+.hijos{
+  //modificado
+  height: 170px !important;
+  width: 100px !important;
+  margin-left: 15px;
+  margin-right: 5px;
+  padding: 0 !important;
+  display: inline-block !important;
+  margin-bottom: 10px;
+  text-align: center;
+}
+figure {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.prueba{
+  height: 50px;
+  width: 50px;
+}
+.botonesOpcion{
+  margin: 10px;
+  background-color: #1485CC;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+}
+.botonesOpcion:hover{
+  border-color: #880e4f;
+}
+
+.imgHijos{
+  //modificado
+  height: 50%;
+  width: 50%;
+}
+.global{
+  height: 100%;
+  width: 100%;
+  background-color: #5a5a5a;
+}
+.compra{
+  overflow: auto;
+  margin: 0 auto;
+  height: 90%;
+  width: 80%;
+  position: relative;
+  margin-top: 20px;
+  background-color: #FFFFFF;
+}
+//Ventana modal
+.ventana-modal{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  color: black;
+  background-image: url("../../../public/img/sources/bg-modal.png") !important;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+.button-ventana{
+  width: 80px;
+  height: 50px;
+  display: inline-block;
+  margin-left: 20px;
+
+}
+.form{
+  width: 300px;
+  height: 300px;
+  padding: 25px;
+  background-color: #eceff1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -175px;
+  margin-top: -175px;
+  border-radius: 20;
+}
+.cerrar-ventana{
+  color: red;
+  text-align: right;
+  font-weight: 900;
+}

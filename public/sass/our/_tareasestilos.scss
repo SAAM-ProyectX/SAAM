@@ -1,0 +1,145 @@
+footer{
+  position: fixed !important;
+}
+/*estilos irvvin*/
+.inicial{
+  border-style: solid;
+  border-top: 35px solid purple;
+  border-color: purple;
+  width: 300px;
+  height: 86%;
+  padding-left: 7px;
+  padding-top: 3px;
+  position: fixed;
+  margin-left: 5px;
+  margin-top: 6px;
+  border-radius: 10px;
+  text-align: center;
+}
+.text{
+  margin-top: -28px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.textpos{
+  position: absolute;
+  margin-top: -28px;
+  margin-left: 80px;
+}
+.cont{
+  -webkit-overflow-x: auto !important;
+  -moz-overflow-x: auto !important;
+  -o-overflow-x: auto !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  width: 1200px;
+  height: 86%;
+  padding-right: 12px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-left: 310px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: purple;
+  display: inline-flex;
+}
+.posicion{
+  padding-left: 7px;
+  padding-top: 2px;
+  background-color: #f2f2f2;
+  height: 100%;
+  min-width: 310px;
+  max-width: 310px;
+  display: block;
+  border: 7px solid purple;
+  border-top: 35px solid purple;
+  border-top-left-radius: 20px;
+  margin-right: 12px !important;
+}
+
+.icon{
+  position: absolute;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-top: -36px;
+  margin-left: -14px;
+  text-align: center;
+  background-color: purple;
+}
+.imag{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.relleno{
+  display: inline-table;
+  width: 2px;
+  height: 100%;
+  border: 10px;
+}
+.Form_tarea{
+  margin-top: 10px;
+}
+
+/*@media (min-width: 850px) {
+    .posicion {
+        margin-right: 12px;
+        background-color: rgba(200, 0, 200, 0.3);
+        height: 100%;
+        width: 200px;
+        border: 6px solid rgb(180, 100, 180);
+    }
+    .icon {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background-color: rgb(180, 100, 180);
+        margin-top: -6px;
+        margin-left: -6px;
+        text-align: center;
+    }
+    .imag{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        background-color: #f2f2f2;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
+}*/
+
+.column {
+
+}
+.portlet {
+  margin: 0 1em 1em 0;
+  padding: 0.3em;
+}
+.portlet-header {
+  padding: 0.2em 0.3em;
+  margin-bottom: 0.5em;
+  position: inherit;
+}
+.portlet-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -8px;
+}
+.portlet-content {
+  padding: 0.4em;
+}
+.portlet-placeholder {
+  border: 1px dotted black;
+  margin: 0 1em 1em 0;
+  height: 50px;
+}
