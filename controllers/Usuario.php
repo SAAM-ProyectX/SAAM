@@ -104,6 +104,47 @@
             $data["id"]=Session::getValue("ID");
             Session::setValue("U_DATA", $this->model->getUser($data)[0]);
         }
+        function subir(){
+            if(Session::exist()){
+                $this->view->render($this,'subir');
+            }
+        }
+        function updateelement(){
+            $NAME = $_POST['miid'];
+            $VALUE = $_POST['valor'];
+            $TABLE = '';
+            $CHECK = 0;
+            $ID = 0;
+            $ID_NAME = '';
+            if($NAME == 'Apellido' || $NAME == 'Ocupacion' || $NAME == 'Frase'){
+                $TABLE = 'Usuario_Informacion';
+                $ID = Session::getValue('U_DATA')['id_info'];
+                $ID_NAME = 'id_info';
+                $CHECK = 1;
+            }elseif($NAME == 'Sitio' || $NAME == 'Correo' || $NAME == 'Nombre'){
+                $TABLE = 'Extra_info';
+                $ID = Session::getValue('U_DATA')['idextra_info'];
+                $ID_NAME = 'idextra_info';
+                $CHECK = 1;
+            }elseif($NAME == 'Telefono'){
+                $TABLE = 'Telefonos';
+                $ID = Session::getValue('U_DATA')['id_Telefono'];
+                $ID_NAME = 'id_Telefono';
+                $CHECK = 1;
+            }else{
+                $CHECK = 0;
+            }
+            if($CHECK == 1){
+                $data['NAME'] = $NAME;
+                $data['VALUE'] = $VALUE;
+                $data['ID_NAME'] = $ID_NAME;
+                $data['ID'] = $ID;
+                $RESPONSE = $this->model->updateelement($TABLE, $data);
+                echo $RESPONSE;
+            }else{
+                echo "ERROR AL BUSCAR LA TABLA";
+            }
+        }
         function salir(){
             Session::destroy();
             header('location:'.URL);

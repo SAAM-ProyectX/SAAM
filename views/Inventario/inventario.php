@@ -56,7 +56,6 @@
                         url: '<?php echo URL; ?>' + 'Inventario/productos',
                         data: "12"
                     }).done(function (response) {
-
                         $("#myContent").html(response);
                     });
                 case "Clientes":

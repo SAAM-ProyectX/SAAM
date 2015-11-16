@@ -3,11 +3,7 @@ Modify bootstrap buttons
 ***/
 
 /* remove rounds from all elements */
-div, input, select, textarea, span, img, table, td, th, p, a, button, ul, li {
-  -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
-}
+
 
 a:focus {
   outline: none !important;
@@ -295,24 +291,26 @@ Glyphicons icons
 Dropdowns
 ***/
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  list-style: none;
-  text-shadow: none;
-  padding: 0px;
-  margin:0px;
-  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);  
-  font-size: 14px;
-  font-family: "Segoe UI",Helvetica, Arial, sans-serif;
-  border: 1px solid #ddd;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    list-style: none;
+    text-shadow: none;
+    padding: 0px;
+    /* margin: 0px; */
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-family: "Segoe UI",Helvetica, Arial, sans-serif;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
-
 .dropdown:hover .caret, 
 .open.dropdown .caret {
   opacity: 1;

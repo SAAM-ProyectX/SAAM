@@ -27,6 +27,9 @@
     <link href="<?php echo URL; ?>public/css/styleslogin.css" type="text/css"/>
     <link rel="shortcut icon" href="favicon.ico" />
     <script src="<?php echo URL; ?>public/plugins/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>public/scripts/_login.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>public/scripts/metodos_foot.js" type="text/javascript"></script>
+
 </head>
 <body class="page-header-fixed">
 <div class="header navbar navbar-inverse navbar-fixed-top">

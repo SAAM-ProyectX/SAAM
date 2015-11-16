@@ -5,16 +5,15 @@ class Faqs extends Controller
         parent::__construct();
     }
     function Faqs(){
-        $this->view->Datos_Faqs = $this->model->all_faqs();
         $this->view->render($this,'Faqs');
     }
     function todo(){
-        $this->view->Datos_Faqs = $this->model->all_faqs();
+        $data['asunto']=$_POST["asunto"];
+        $this->view->Datos_Faqs = $this->model->llamar_procedimiento($data);
         $this->view->render($this,'todo');
     }
-    function frecuentes(){
-        $this->view->Datos_Faqs = $this->model->all_faqs();
-        $this->view->render($this,'frecuentes');
+    function generar_pregunta(){
+        $this->view->render($this,'generar_pregunta');
     }
     function insertar(){
         $data["fecha"]=date("Y-m-d H:i:s");

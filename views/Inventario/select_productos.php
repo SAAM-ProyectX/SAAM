@@ -21,7 +21,7 @@ for($i = 0; $i<count($this->getProducts);$i++){
     $varia = "";
 
     foreach($this->getProducts[$i] as $key => $valor){
-        $varia .= (string)("<td>".$valor."</td>");
+        $varia .= (string)("<td class='ejemplo'>".$valor."</td>");
     }
 
     echo "<tbody><tr class='Productos' id ='Element'>".$varia."</tr></tbody>";

@@ -11,11 +11,7 @@
                     </div>
                 </div>
                 <div id="dashboard">
-                    <div class="formWrapper">
-                        <?php echo Session::getValue('U_NAME'); ?>
-                        <button id="closeSessionBtn">Cerrar Session</button>
-                        <button id="buttonProfile">Ver perfil</button>
-                    </div>
+
 
                 </div>
         </div>

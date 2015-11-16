@@ -6,11 +6,11 @@ footer{
   border-style: solid;
   border-top: 35px solid purple;
   border-color: purple;
-  width: 300px;
-  height: 86%;
+  width: 300px !important;
+  height: 585px !important;
   padding-left: 7px;
   padding-top: 3px;
-  position: fixed;
+  position: absolute;
   margin-left: 5px;
   margin-top: 6px;
   border-radius: 10px;
@@ -22,9 +22,25 @@ footer{
   margin-right: auto;
 }
 .textpos{
-  position: absolute;
-  margin-top: -28px;
-  margin-left: 80px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #F2F2F2;
+  position: relative;
+  margin-top: -37px;
+  width: 260px;
+  margin-left: 26px;
+  word-wrap: break-word;
+}
+.columna{
+  background-color: #F2F2F2;
+  height: 500px;
+  width: 285px !important;
+  -webkit-overflow-y: auto !important;
+  -moz-overflow-y: auto !important;
+  -o-overflow-y: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 .cont{
   -webkit-overflow-x: auto !important;
@@ -32,8 +48,8 @@ footer{
   -o-overflow-x: auto !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
-  width: 1200px;
-  height: 86%;
+  width: 930px !important;
+  height: 585px !important;
   padding-right: 12px !important;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -41,8 +57,7 @@ footer{
   margin-left: 310px;
   margin-top: 6px;
   border-radius: 10px;
-  border-style: solid;
-  border-color: purple;
+  border: solid purple;
   display: inline-flex;
 }
 .posicion{
@@ -60,11 +75,12 @@ footer{
 }
 
 .icon{
-  position: absolute;
+  position: relative !important;
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  margin-top: -36px;
+  padding-top: 7px;
+  margin-top: -37px;
   margin-left: -14px;
   text-align: center;
   background-color: purple;
@@ -72,7 +88,6 @@ footer{
 .imag{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 7px;
   background-color: #f2f2f2;
   border-radius: 50%;
   width: 30px;
@@ -118,7 +133,6 @@ footer{
 }*/
 
 .column {
-
 }
 .portlet {
   margin: 0 1em 1em 0;

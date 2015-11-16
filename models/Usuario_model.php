@@ -25,4 +25,7 @@
         function _callProcedureIUD($ProcedureName, $data){
             return $this->db->procedure_IUD($ProcedureName, $data);
         }
+        function updateelement($TableName, $data){
+           return $this->db->updateUserData($TableName, $data);
+        }
     }

@@ -10,6 +10,11 @@
                 header("Location: ".URL);
             }
         }
+        function tabla(){
+            if(Session::exist()){
+                return $this->view->render($this,'inventarioBoots');
+            }
+        }
         function proveedores(){
             if(Session::exist()){
                 $this->view->getProveedores = $this->model->_getProveedores();
@@ -18,13 +23,13 @@
         }
         function inventario(){
             if(Session::exist()){
-
+                //Vista index de inventario
                 $this->view->getProducts = $this->model->_getProducts();
                 if(isset($_GET["codProducto"])){
                     $data["codProducto"] = $_GET["codProducto"];
                     $this->view->Producto = $this->model->_getProduct($data)[0];
                 }
-                $this->view->render($this, 'inventario');
+                $this->view->render($this, 'inventarioBoots');
             }else{
                 header("Location: ".URL);
             }

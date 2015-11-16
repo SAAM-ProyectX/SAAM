@@ -3,19 +3,6 @@
   padding: 10px;
   background: blue;
 }
-.fondo{
-  display: inline-table;
-  background: rgba(0, 0, 0, 0.3);
-  width: 400px;
-  height: 35%;
-  bottom: 25%;
-  left: 33%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  padding: 40px;
-}
 #form_pregunta{
   display: inline-table;
   background: rgba(0, 0, 0, 0.3);
@@ -28,12 +15,9 @@
   top: 30%;
 
 }
-.Preguntas{
-  display: inline-flex;
-  max-height: 400px;
-  overflow-y: auto;
-  display: block;
-  padding-bottom: 10px;
+#mycontainer{
+  position: fixed;
+  left: 35%;
 }
 #preguntas_frecuentes{
   background: rgba(0, 0, 0, 0.3);
@@ -56,4 +40,47 @@
   position: fixed;
   left: 15%;
   top: 21%;
+}
+#menu{
+  background: #000;
+  list-style: none;
+  margin: 1px;
+  padding: 0;
+  width: 12em;
+  left: 50px;
+  top: 100px;
+}
+#limenu{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#amenu{
+  background: #000;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: normal;
+}
+#limenu:first-child{
+  padding-top: 20px;
+}
+#amenu:hover {
+  background: #ffffff;
+  transition:all 2s;
+  -webkit-transition:all 200ms;
+  color: #000;
+  border-left:  3px solid #800080;;
+  padding-bottom: 8px;
+}
+#crear{
+  width: 100px;
+}
+.combo_preguntas{
+  width: 180px;
+  height: 30px;
+  border-color: #A9A9A9;
+  background: #f2f2f2;
 }

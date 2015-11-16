@@ -9,4 +9,7 @@ class Faqs_model extends Model{
     function Crear_Faq($data){
         return $this->db->procedure_S('insertar_faqs',$data);
     }
+    function llamar_procedimiento($data){
+        return $this->db->procedure_S('clasificacion_faqs',$data);
+    }
 }

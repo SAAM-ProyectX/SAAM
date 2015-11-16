@@ -1,21 +1,117 @@
 
     /*Index*/
-      .Estado_Proyecto{
-         background-color: rgba(42,57,47,0.5) !important;
-         border-bottom-left-radius: 50px !important;
-         border-top-left-radius: 50px !important;
-         border-top-right-radius: 10px !important;
-         border-bottom-right-radius: 10px !important;
-         width: 280px !important;
-        display: inline-table;
+
+      /*Busqueda de Proyecto*/
+      .Select_Tipos_Proyecto_Area{
+        display: inline;
+        width: 115px;
+        height: 2rem;
       }
+
+      .boton_Consulta{
+        display: none;
+        width: 100px !important;
+        height: 2rem !important;
+        border-radius: 4px;
+        background-color: #90a4ae !important;
+        color: #FFF;
+        border: 3px solid #d3d3d3;
+        padding-top: 3px !important;
+      }
+      .boton_Consulta:active{
+        border: 2px solid gray !important;
+      }
+      #Nombre_Proyecto{
+        display: none;
+        width: 100px !important;
+        margin: 2px !important;
+        height: 1.5rem !important;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 2px solid #f2f2f2 !important;
+      }
+      /*Fin de Busqueda de Proyecto*/
+
+
+
+
+    /*Inicio de Visualizacion de los Avances del Proyecto*/
+      /*Inicio de las tablas contenedoras*/
+        .contenedor_V{
+          border: 3px solid purple;
+          display: inline-flex;
+          border-radius: 5px;
+          width: 70%;
+          height: 75%;
+          margin-left: 10px;
+          margin-bottom: 10px;
+
+          -webkit-overflow-x: scroll !important;
+          -moz-overflow-x: scroll !important;
+          -o-overflow-x: scroll !important;
+          overflow-x: auto !important;
+        }
+        .Seccion_V{
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+          display: inline-flex;
+          text-align: center;
+          border: 3px solid purple;
+          border-top: 35px solid purple;
+          border-radius: 5px;
+          text-align: center;
+          background-color: #D6A8E6;
+          height: 100%;
+          min-width: 230px;
+
+        }
+        .Titulo_Seccion_V{
+          margin-top: -28px;
+          margin-right: auto;
+          margin-left: auto;
+          width: 230px;
+          height: 30px;
+        }
+        .Contenido_Seccion_V{
+          margin-top: 55px;
+          width: 230px;
+          padding: 5px;
+          height: 100%;
+        }
+      /*Fin de las tablas contenedoras*/
+
+      /*Inicio de los Divs contenedores*/
+          .Estado_Proyecto{
+            background-color: rgba(42,57,47,0.5) !important;
+            border-bottom-left-radius: 50px !important;
+            border-top-left-radius: 50px !important;
+            border-top-right-radius: 10px !important;
+            border-bottom-right-radius: 10px !important;
+            width: 220px !important;
+            display: inline-table;
+            position: inherit;
+          }
+          .Avance_Estado{
+
+          }
+          .Titulo_Estado{
+
+          }
+          .Contenido_Estado{
+
+          }
+      /*Fin de los Divs contenedores*/
+    /*Fin de Visualizacion de los Avances del Proyecto*/
+
 
       .Conten-proyectos{
         padding: 20px;
       }
 
       .linea{
-
         display: inline;
       }
 
@@ -23,19 +119,15 @@
           position: fixed;
           background-color: gray;
           top: 50px;
-          right: -300px;
+          right: -250px;
           display: block;
-          width:  300px;
+          width:  250px;
           height: 92%;
           color: #fff;
           padding: 10px;
           padding-top: 20px;
       }
 
-      .Select_Tipos_Proyecto{
-        display: inline;
-        width: 100px;
-      }
 
       .Centrar_P{
         text-align: center;
@@ -77,6 +169,42 @@
       .A_Detalles{
 
       }
+
+      /*Posiciones Proyectos*/
+        .portlet {
+          margin: 0 1em 1em 0;
+          padding: 0.3em;
+        }
+        .portlet-header {
+        }
+        .portlet-toggle {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-top: -8px;
+        }
+        .portlet-content {
+          padding: 0.4em;
+        }
+        .portlet-placeholder {
+          border: 1px dotted black;
+          margin: 0 1em 1em 0;
+          height: 50px;
+        }
+      /*Fin de Posiciones de Proyecto*/
+      /*Fin del Index(Visualizaciones)*/
+
+
+      /*Alta de Proyectos*/
+        //Datos de Proyecto
+
+        //Cuadro de Area
+
+    
+      /*Fin de Alta de proyectos*/
+
+
+
      // Colors
       $barColor: purple;
       $overlayColor: #fffde8;

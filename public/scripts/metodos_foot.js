@@ -28,8 +28,8 @@ function signUp(){
     }
 }
 function signIn(){
-    var alias = $('form[name=signIn] input[name=alias]')[0].value;
-    var contrasena = $('form[name=signIn] input[name=contrasena]')[0].value;
+    var alias = $('#alias').val();
+    var contrasena = $('#contrasena').val();
     $.ajax({
         type: "POST",
         url: urlx+"Usuario/signIn",

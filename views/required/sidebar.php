@@ -1,3 +1,4 @@
+
 <div class="page-container">
     <div class="page-sidebar nav-collapse collapse">
 <ul class="page-sidebar-menu">
@@ -35,11 +36,29 @@
             <span class="title">Proyectos</span>
         </a>
     </li>
-    <li class="">
-        <a href="<?php echo URL;?>Inventario/inventario">
+    <li>
+        <a href="javascript:;">
             <i class="icon-shopping-cart"></i>
             <span class="title">Inventario</span>
+            <span class="arrow "></span>
         </a>
+        <ul class="sub-menu">
+            <li>
+                <a class="inventario" href="#">
+                    <span>Clientes</span>
+                </a>
+            </li>
+            <li>
+                <a class="inventario" href="#">
+                    <span>Proveedores</span>
+                </a>
+            </li>
+            <li>
+                <a class="inventario" href="#">
+                    <span>Productos</span>
+                </a>
+            </li>
+        </ul>
     </li>
     <li class="">
         <a href="<?php echo URL; ?>Faqs/faqs">

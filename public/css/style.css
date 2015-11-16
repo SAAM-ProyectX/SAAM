@@ -22,13 +22,13 @@ light grey: #fafafa;
 Reset and overrides  
 ***/
 /* general body settings */
-body { 
-  color: #000;
-    font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  padding: 0px !important;
-  margin: 0px !important;
-  font-size:13px; 
-  direction: ltr;
+body {
+    color: #000;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 16px !important;
+    direction: ltr;
 }
 
 /***
@@ -334,6 +334,7 @@ Header and header elements.
 
 .header .brand img {
   margin-left: 20px;
+    margin-top: -6px;
 }
 
 .header .btn-navbar {
@@ -354,11 +355,10 @@ Header and header elements.
 
 .header .navbar-inner {
   width: 100%;
-  margin-left: 0 0 0 110px;
+  margin-left: 0;
   border: 0px;
   padding: 0px; 
   box-shadow: none;
-  height: 42px; 
 }
 
 .header .nav {
@@ -394,7 +394,7 @@ Header and header elements.
 }
 
 .header .nav > li.dropdown.user .dropdown-toggle {
-  padding: 10px 4px 7px 9px;
+  padding: 12px 4px 7px 9px;
 }
 
 .header .nav > li.dropdown.user .dropdown-toggle:hover {
@@ -418,21 +418,20 @@ Header and header elements.
 }
 
 .header .nav > li.dropdown .dropdown-toggle .badge {
-  position: absolute;
-  font-size: 11px !important;
-  font-weight: 300;
-  top: 8px;
-  right: 24px;
-  text-align: center;
-  height: 14px;
-  background-color: #7200AC;
-  padding: 2px 6px 2px 6px;
-  -webkit-border-radius: 12px !important;
-     -moz-border-radius: 12px !important;
-          border-radius: 12px !important;
-  text-shadow:none !important;
+    position: absolute;
+    font-size: 12px !important;
+    font-weight: 300;
+    top: 10px;
+    right: 24px;
+    text-align: center;
+    height: 17px;
+    background-color: #7200AC;
+    padding: 2px 6px 2px 6px;
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 12px !important;
+    border-radius: 12px !important;
+    text-shadow: none !important;
 }
-
 /* firefox hack for top bar badges */
 @-moz-document url-prefix() { 
   .header .nav li.dropdown .dropdown-toggle .badge {
@@ -523,7 +522,7 @@ ul.page-sidebar-menu > li.active > a {
   border: none; 
   text-shadow:none;
 }  
-
+/*
 ul.page-sidebar-menu > li.active > a .selected {
   display: block;
   width: 8px;
@@ -534,7 +533,7 @@ ul.page-sidebar-menu > li.active > a .selected {
   right:0px;
   top:8px;
 }
-
+*/
 .page-sidebar ul > li > a > .arrow:before {  
    float: right;
    margin-top: 1px;
@@ -1027,7 +1026,7 @@ Footer
 
 /* begin: fixed footer */
 .page-footer-fixed .footer {
-  position: fixed;
+
   left: 0;
   right: 0;
   z-index: 10000;
@@ -5337,7 +5336,6 @@ Datatables Plugin(in v1.3)
 }
 
 .page-footer-fixed {
-    position: fixed;
     left: 0;
     right: 0;
     z-index: 10000;
@@ -5348,6 +5346,7 @@ Datatables Plugin(in v1.3)
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 7px;
+    height: 7px;
 }
 
 /* Track */
@@ -5367,11 +5366,12 @@ Datatables Plugin(in v1.3)
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(106, 6, 172, 1);
 }
-.logoPerfil{
-    width: 23px;
-    height: 23px;
+.logoPerfil {
+    width: 27px;
+    height: 27px;
     -webkit-border-radius: 50% !important;
     border-radius: 50% !important;
     margin-right: 5px;
     border: 2px solid purple;
+    margin-top: -4px;
 }

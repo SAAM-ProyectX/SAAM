@@ -8,11 +8,11 @@ and open the template in the editor.
     Author     : Horacio
 */
 @import "other/_variables";
-@import "our/_estilosMoises.scss";
 @import "our/_faqs.scss";
-@import "our/_fontsinventarios.scss";
-@import "our/_tareasestilos.scss";
+//@import "our/_fontsinventarios.scss";
+@import "our/_tareasestilos";
 @import "our/_styleinventario.scss";
-@import "our/_menu.scss";
+//@import "our/_menu.scss";
 @import "our/styleventas.scss";
+@import "our/_estilosMoises.scss";
 @import "our/_estilos.scss";

@@ -29,12 +29,32 @@ class Database extends PDO{
     }
 
     /**
+     * @param $TableName
+     * @param $data
+     * @return array
+     */
+    public function updateUserData($TableName, $data, $array=array(), $fetchMode = PDO::FETCH_ASSOC){
+        //echo print_r($fieldValues);
+        $TABLE = $TableName;
+        $NAME = $data['NAME'];
+        $ID = $data['ID'];
+        $ID_NAME = $data['ID_NAME'];
+        $VALUE = $data['VALUE'];
+
+        $sth = $this->prepare("UPDATE $TABLE SET $NAME = '$VALUE' WHERE $ID_NAME = $ID");
+        if($sth->execute()){
+            return 'OK';
+        }else{
+            return 'ERROR';
+        }
+    }
+    /**
      * @param $ProcedureName
      * @param $data
      * @param array $array
      * @param int $fetchMode
      * @return mixed
-     * @internal param $ProcedureNameASZ
+     * @internal param $ProcedureName
      */
     public function procedure_S($ProcedureName, $data, $array=array(), $fetchMode = PDO::FETCH_ASSOC)
     {

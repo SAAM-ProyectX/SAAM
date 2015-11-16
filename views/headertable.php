@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
+
     <link href="<?php echo URL; ?>public/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo URL; ?>public/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo URL; ?>public/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -17,23 +18,12 @@
     <link href="<?php echo URL; ?>public/css/style-responsive.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo URL; ?>public/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="<?php echo URL; ?>public/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo URL; ?>public/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo URL; ?>public/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo URL; ?>public/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo URL; ?>public/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="<?php echo URL; ?>public/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-
     <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/plugins/select2/select2_metro.css" />
     <link rel="stylesheet" href="<?php echo URL; ?>public/plugins/data-tables/DT_bootstrap.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
 
-    <link href="<?php echo URL; ?>public/css/ourstyles.css" rel="stylesheet" type="text/css"/>
-    <!--link href="<?php echo URL; ?>public/css/styleslogin.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo URL; ?>public/css/styleall.css" rel="stylesheet" type="text/css" /-->
+    <link rel="shortcut icon" href="favicon.ico" />
     <script src="<?php echo URL; ?>public/plugins/jquery-1.10.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var codigox = <?php echo Session::getValue('U_DATA')["codigo"]; ?>;
-    </script>
+    <script src="<?php echo URL; ?>public/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 <body class="page-header-fixed page-sidebar-closed">
 <div class="header navbar navbar-inverse navbar-fixed-top">
@@ -76,7 +66,7 @@
 								<span class="time">2 hrs</span>
 								</span>
 								<span class="message">
-								DescripciÃ³n
+								Descripción
 								</span>
                             </a>
                         </li>
@@ -113,7 +103,7 @@
                 </li>
                 <li class="dropdown user">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img alt="" src="<?php echo URL; ?>public/img/usuarios/profile/1234.jpg" class="logoPerfil"/>
+                        <img alt="" src="<?php echo URL; ?>public/img/profile.jpg" class="logoPerfil"/>
                         <span class="username"><?php echo ucfirst(Session::getValue('U_NAME')); ?></span>
                         <i class="icon-angle-down"></i>
                     </a>
@@ -121,7 +111,7 @@
                         <li><a href="<?php echo URL; ?>Usuario/perfil"><i class="icon-user"></i>Mi perfil</a></li>
                         <li><a href="#"><i class="icon-tasks"></i> Mis tareas</a></li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo URL; ?>Usuario/salir"><i class="icon-key"></i> Cerrar sesiÃ³n</a></li>
+                        <li><a href="" id="closeSessionBtn"><i class="icon-key"></i> Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ul>
