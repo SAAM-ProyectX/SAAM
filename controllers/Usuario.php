@@ -109,6 +109,9 @@
                 $this->view->render($this,'subir');
             }
         }
+        function ejemplo(){
+            $this->view->render($this, 'ejemplo');
+        }
         function updateelement(){
             $NAME = $_POST['miid'];
             $VALUE = $_POST['valor'];

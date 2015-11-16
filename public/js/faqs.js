@@ -3,7 +3,7 @@
  */
 
 
-var urlx = "http://localhost/SAAM/";
+var urlx = "http://www.saam.mx/";
 function boton(dato){
     var asunto;
     switch (dato) {
