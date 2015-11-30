@@ -54,11 +54,12 @@
             for($i = 1; $i < strlen($val); $i++){ $estado .= $val[$i]; }
             Session::getValue('U_DATA')['Estado'] = $estado;
             ?>
+            <!-- Cambios -->
             <input type="hidden" id="id_Usuario" value="<?php echo $this->userData['id_Usuario']; ?>">
             <div class="container-fluid">
                 <div id="dashboard">
                     <!--div id="addPostElement">+</div-->
-                    <div class="span12">
+                    <div class="span12 yolo">
                         <div class="span3 datosPerfil">
 
                             <div class="TituloUsuario">Información</div>
