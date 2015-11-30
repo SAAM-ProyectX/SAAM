@@ -1,65 +1,65 @@
 <?php require 'views/head.php';?>
-    <div class="contenedor">
-        <div class="area1">
-            <script type="text/javascript">
-                var posImg = 0;
-                var total = 0;
-                $(document).ready(function(){
-                    posImg = 1;
-                    total = $("#SliderPrincipal").children().length;
-                    $(".parte2_slider"+posImg).css({"position":"absolute", "display":"block", "max-width":"700px"}).delay(100).animate({"margin-left": 0+'px'},1600,'easeInQuad');
-                    $(".parte2_slider"+posImg).delay(4500).animate({"margin-left": -1500+'px'},1300,'easeOutQuad');
-                    posImg++;
-                });
-                window.setInterval(function slider(){
-                    if(posImg > total){ posImg = 1; }
-                    if(posImg < 1){ posImg = total; }
-                    $(".parte2_slider"+posImg).css({"position":"absolute", "display":"block", "max-width":"700px"}).delay(100).animate({"margin-left": 0+'px'},1600,'easeInQuad');
-                    $(".parte2_slider"+posImg).delay(4500).animate({"margin-left": -1500+'px'},1300,'easeOutQuad');
-                    posImg= posImg+1
-                },5200);
-            </script>
-            <div id="SliderPrincipal">
-                <div class="parte2_slider1 oculto">
-                    <p class="titulo_Slider">Nuestos productos</p>
-                    <p class="subtitulo_Slider">Nadie quiere una vida complicada. Con los diferentes productos de SAAM, tendrás todas las herramientas que necesitas para lograr tus metas profesionales de la forma más fácil.</p>
-                    <p>Olvídate de las cantidades interminables de papeleo y correo electrónico. SAMM ofrece un sistema efectivo de proyectos y tareas para organizar tu empresa en un solo lugar.</p>
-                    <img id="tv" src="public/img/ss6_03.png">
-                </div>
-                <div class="parte2_slider2 oculto">
-                    <p class="titulo_Slider">Nuestos servicios</p>
-                    <p class="subtitulo_Slider">Nadie quiere una vida complicada. Con los diferentes productos de SAAM, tendrás todas las herramientas que necesitas para lograr tus metas profesionales de la forma más fácil.</p>
-                    <p>Olvídate de las cantidades interminables de papeleo y correo electrónico. SAMM ofrece un sistema efectivo de proyectos y tareas para organizar tu empresa en un solo lugar.</p>
-                    <img id="tv" src="public/img/ss6_03.png">
-                </div>
-                <div class="parte2_slider3 oculto">
-                    <p class="titulo_Slider">Nuestos clientes</p>
-                    <p class="subtitulo_Slider">Nadie quiere una vida complicada. Con los diferentes productos de SAAM, tendrás todas las herramientas que necesitas para lograr tus metas profesionales de la forma más fácil.</p>
-                    <p>Olvídate de las cantidades interminables de papeleo y correo electrónico. SAMM ofrece un sistema efectivo de proyectos y tareas para organizar tu empresa en un solo lugar.</p>
-                    <img id="tv" src="public/img/ss6_03.png">
+    <div class="logo">
+        <img src="<?php echo URL; ?>public/img/logo.png" alt="" />
+    </div>
+    <div class="content">
+        <form  class="form-vertical login-form" id="signInForm" action="<?php echo URL;?>Usuario/signIn" method="POST">
+            <h3 class="form-title">Ingresar</h3>
+            <div class="alert alert-error hide">
+                <button class="close" data-dismiss="alert"></button>
+                <span>Ingresar un usuario y/o contraseña válidos.</span>
+            </div>
+            <div class="control-group">
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="controls">
+                    <div class="input-icon left">
+                        <i class="icon-user"></i>
+                        <input class="m-wrap placeholder-no-fix" type="text" placeholder="Usuario" name="alias" id="alias"/>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="area2">
-            <div class="contenedorlogin">
-                <div class="centerdiv">
-                    <div class="imagen-login"><img src="public/img/noUserImg.png"></div>
-                    <p class="headtext">Iniciar sesión</p>
-                    <form id="passRecover">
-                        <input id="Correo" name="Correo" type="email" class="validate button-email" placeholder="Correo"/>
-                        <button id="passRecoverBtn" name="sendEmail" class="waves-effect waves-light cien" type="submit">Enviar correo</button>
-                        </br><div class="returnLogin"><a href="#">Regresar al inicio de sesión</a></div>
-                        </br><div class="mensaje">Se enviará un mensaje a su correo electrónico con el cuál podrá solicitar y/o generar una nueva contraseña.</div>
-                    </form>
-                    <form id="signInForm" action="<?php echo URL; ?>Usuario/signIn" name="signIn" method="post" style="z-index: 999999999">
-                        <input id="alias" name="alias" type="text" class="validate button-Users" placeholder="Nombre de usuario"/>
-                        <input id="contrasena" name="contrasena" type="password" class="validate button-security" placeholder="Contraseña"/>
-                        <button id="signInBtn" name="signInBtn" class="waves-effect waves-light cien" type="submit">Ingresar</button>
-                        <div class="passRecover"><a href="#">¿Has olvidado tu contraseña?</a></div>
-                    </form >
-                    <div class="errorX"></div>
+            <div class="control-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="controls">
+                    <div class="input-icon left">
+                        <i class="icon-lock"></i>
+                        <input class="m-wrap placeholder-no-fix" type="password" placeholder="Contraseña" name="contrasena" id="contrasena"/>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="form-actions">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember" value="1"/> Recordarme
+                </label>
+                <button type="submit" class="btn purple pull-right" id="signInBtn" name="signInBtn">
+                    Ingresar <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>
+            <div class="forget-password">
+                <h5 id="forget-password">¿Olvidaste tu contraseña?</h5>
+            </div>
+        </form>
+
+
+        <form class="form-vertical forget-form" id="passRecover">
+            <h3 class="">¿Olvidaste tu contraseña?</h3>
+            <p>Ingresa tu correo electrónico para recuperar su contraseña</p>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-icon left">
+                        <i class="icon-envelope"></i>
+                        <input class="m-wrap placeholder-no-fix" type="text" placeholder="Correo" name="email" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="back-btn" class="btn">
+                    <i class="m-icon-swapleft"></i> Regresar
+                </button>
+                <button type="submit" class="btn purple pull-right">
+                    Recuperar <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>
+        </form>
     </div>
 <?php require('views/foot.php'); ?>

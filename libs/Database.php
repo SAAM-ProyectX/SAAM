@@ -19,7 +19,7 @@ class Database extends PDO{
      * @return bool
      */
     public function procedure_IUD($ProcedureName, $data){
-        ksort($data);
+        //ksort($data);
         $fieldValues = "'".implode("', '", array_values($data))."'";
         $sth = $this->prepare("CALL  $ProcedureName($fieldValues)");
         foreach ($data as $key => $value){

@@ -1,6 +1,20 @@
+$.fn.enterKey = function (fnc) {
+    return this.each(function () {
+        $(this).keypress(function (ev) {
+            var keycode = (ev.keyCode ? ev.keyCode : ev.which);
+            if (keycode == '13') {
+                fnc.call(this, ev);
+                console.log('yei');
+                $("#signUpBtn").trigger('click');
+                //alert("Hola");
+            }
+        })
+    })
+}
 $(function(){
-
-
+    $("#contrasena").enterKey(function () {
+        $("#signUpBtn").trigger('click');
+    })
     $('#signUpButton').click(function(){
         $("#signInForm").hide();
         $("#signUpForm").fadeToggle();

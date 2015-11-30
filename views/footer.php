@@ -11,10 +11,17 @@
 
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
+
+
 <script src="<?php echo URL; ?>public/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="<?php echo URL; ?>public/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+
 <script src="<?php echo URL; ?>public/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo URL; ?>public/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+<script type="text/javascript" src="<?php echo URL; ?>public/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+
+
 <!--[if lt IE 9]>
 <script src="<?php echo URL; ?>public/plugins/excanvas.min.js"></script>
 <script src="<?php echo URL; ?>public/plugins/respond.min.js"></script>
@@ -48,20 +55,26 @@
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script type="text/javascript" src="<?php echo URL; ?>public/js/estilosProyectos.js"></script>
+<script type="text/javascript">
+    var codigox = <?php echo $this->userData["codigo"]; ?>;
+</script>
 <script type="text/javascript" src="<?php echo URL; ?>public/js/script.js"></script>
 <script type="text/javascript" src="<?php echo URL; ?>public/js/faqs.js"></script>
-
-
+<script type="text/javascript" src="<?php echo URL; ?>public/plugins/jquery.bootpag.min.js"></script>
+<script src="<?php echo URL; ?>public/scripts/ui-general.js"></script>
+<script src="<?php echo URL; ?>public/scripts/form-wizard.js"></script>
 <script>
     jQuery(document).ready(function() {
         App.init();
-        Index.init();
-        Index.initCalendar();
-        Index.initCharts();
-        Index.initChat();
-        Index.initMiniCharts();
-        Index.initDashboardDaterange();
-        Index.initIntro();
+        //Index.init();
+        //Index.initCalendar();
+        //Index.initCharts();
+        //Index.initChat();
+        //Index.initMiniCharts();
+        //Index.initDashboardDaterange();
+        //Index.initIntro();
+        FormWizard.init();
+        UIGeneral.init();
     });
 </script>
 
@@ -119,20 +132,8 @@
 
                     break;
             }
-            /*$.ajax({
-                type:'POST',
-                url: '<?php URL;?>Inventario/inventario',
-                data:"12"
-            }).done(
-                function(response){
-                    $('#dashboard').html(response);
-                    $('.title_Principal').html("ALGO");
-                    $('.subtitle_Principal').html("Otra cosa");
-                });*/
         });
-        $(document).on('click','.row-details', function() {
-            alert("Hola");
-        });
+
     });
 </script>
 </body>

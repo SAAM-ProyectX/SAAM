@@ -11,7 +11,9 @@
         }
         static function setValue($var, $val){
             $_SESSION[$var] = $val;
-
+        }
+        static function setUserValue($array, $var, $val){
+            $_SESSION[$array][$var] = $val;
         }
         static function unsetValue($var){
             if(isset($_SESSION[$var])){

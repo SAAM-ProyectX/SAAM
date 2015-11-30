@@ -2,11 +2,30 @@
  * Created by Horacio on 15/11/2015.
  */
 var urlx="http://www.saam.mx/";
+var horaPublicacion="";
 $(document).ready(function (e) {
+
+    $('#uploadmultipleimage').hide();
+
+    loadPostByUser();
+    function loadPostByUser(){
+        $.ajax({
+            url: urlx + 'Usuario/loadPostByUser',
+            type: 'POST',
+            data: {dato: 12},
+        }).success(function(response){
+            $('.timeline').html(response);
+            //alert(response);
+        }).error(function(response){
+
+        }).done(function(response){
+            $('.timeline').html(response);
+        });
+    }
     $("#cancelar").click(function () {
         $.limpiarform();
     });
-    //Eliminamos el artículo de la base de datos
+    //Eliminamos el artï¿½culo de la base de datos
     $.limpiarform = function () {
         $('#previewing').attr('src', 'noimage.png');
     }
@@ -42,7 +61,32 @@ $(document).ready(function (e) {
                             $("#uploadimage").trigger('submit');
                         };
                         image.onerror = function () {
-                            alert('Imagen inválida: ' + file.type);
+                            alert('Imagen invÃ¡lida: ' + file.type);
+                        };
+                    };
+                }
+            }
+        });
+
+        $(".multiplefile").change(function (e) {
+            e.preventDefault();
+            var files = this.files;
+            for(var i = 0; i < files.length; i++){
+                var file = this.files[i];
+                if (file.type != undefined) {
+                    var reader = new FileReader();
+                    var image = new Image();
+                    var newImg = "";
+                    reader.readAsDataURL(file);
+                    reader.onload = function (_file) {
+                        image.src = _file.target.result;
+                        image.onload = function () {
+                            img = this.src;
+                        };
+                        newImg += "<img src='"+image.src+"' width='50' height='50' draggable='false'>";
+                        $('.imagesLoad').html(newImg);
+                        image.onerror = function () {
+                            alert('Imagen invÃ¡lida: ' + file.type);
                         };
                     };
                 }
@@ -50,7 +94,63 @@ $(document).ready(function (e) {
         });
     });
 
+    $('.botonSendPost').click(function(e){
+        if($('.textoPost').html() == ''){
+            return false;
+        }else{
+            agregarPost();
+            $('#uploadmultipleimage').trigger('submit');
 
+            $('.multiplefile').val('');
+            //loadPostByUser();
+            var D = new Date();
+            var imagen = $('.perfilPost > img').attr('src');
+            var usuario = $('.perfilPost').attr('data-original-title');
+            var lista = '<li class="timeline-purple margen-bottom-30">';
+            var imagenes = $('.imagesLoad').html();
+            lista += '<div class="timeline-icon"><img class="imagePostPerfil tooltips" src="'+imagen+'" data-placement="top" data-original-title="'+usuario+'"></div>';
+            lista += '<div class="timeline-body">';
+            lista += '<div class="timeline-content">';
+            lista += $('.textoPost').html();
+            lista += '</div>';
+            lista += "<div class='listImagesByPost'>";
+            lista += imagenes;
+            lista += '</div>';
+            lista += '<div class="timeline-footer">';
+            lista += '<div class="btn-group"><a class="btn purple" href="#" data-toggle="dropdown"><i class="icon-angle-down"></i></a><ul class="dropdown-menu"><li><a href="#"><i class="icon-pencil"></i> Editar</a></li><li><a href="#"><i class="icon-remove"></i> Eliminar</a></li></ul></div>';
+            lista += '<span class="usuario">'+horaPublicacion+'</span>';
+            lista += '</div>';
+            lista += '</div>';
+            lista += '</li>';
+            $('.timeline').prepend(lista);
+            $('.textoPost').html('');
+        }
+    });
+    function AddZero(num) {
+        return (num >= 0 && num < 10) ? "0" + num : num + "";
+    }
+
+    function agregarPost(){
+        var D = new Date();
+        var Descripcion_Publicaciones = $('.textoPost').html();
+        var Categoria = 1;
+        var Hora = D.getFullYear() + '-' + AddZero(D.getMonth()) + '-' + AddZero(D.getDay()) + ' ' + AddZero(D.getHours()) + ':' + AddZero(D.getMinutes()) + ':' + AddZero(D.getSeconds());
+        horaPublicacion = Hora;
+        //alert(Hora);
+        var id_Usuario = jQuery('#id_Usuario').val();
+        $.ajax({
+            url: urlx + 'Usuario/publicar',
+            type: 'POST',
+            data: { Descripcion: Descripcion_Publicaciones, Categoria: Categoria, Hora: Hora, Usuario: id_Usuario }
+        }).success(function(response){
+
+        }).error(function(response){
+
+        }).done(function(response){
+
+        });
+        //alert(Hora);
+    }
     $("#uploadimage").on('submit', (function (e) {
         $("#message").empty();
         e.preventDefault();
@@ -66,20 +166,51 @@ $(document).ready(function (e) {
                 $("#message").html(datos[0]).delay(2000).fadeOut("slow");
             }
         });
-        //alert("Se ha insertado correctamente el registro");
-        //$("#articulos").trigger("click");
     }));
+    $("#uploadmultipleimage").on('submit', (function (e) {
+        $("#message").empty();
+        var formData = new FormData(this);
+        formData.append('Hora', horaPublicacion);
+        e.preventDefault();
+        $.ajax({
+            url: urlx + "Usuario/subirVarios",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                var datos = data.split(',');
+                $("#message").html(datos[0]).delay(2000).fadeOut("slow");
+            }
+        }).success(function(response){
+            //alert("BIEN");
+            //alert(response);
+            $('.imagesLoad').empty();
+        }).error(function(response){
+            alert("ERROR");
+        });
+    }));
+
+
     //Subir imagen AJAX
     $('#profileImage').click(function (e) {
         e.preventDefault();
         $('#verificar').val("1");
         $('.file').trigger('click');
     });
+
     $('#changeBack').click(function (e) {
         e.preventDefault();
         $('#verificar').val("3");
         $('.file').trigger('click');
     });
+
+    $('#addPictures').click(function(e){
+        e.preventDefault();
+        $('#verificarmultiple').val('1');
+        $('.multiplefile').trigger('click');
+    })
     var $uploadProfile = jQuery('#changeProfile');
     $uploadProfile.click(function (e) {
         e.preventDefault();
@@ -107,7 +238,6 @@ $(document).ready(function (e) {
                         $avalue = $miinput.val();
                         $myID = $miinput.attr("id").replace('ch_', '');
                         $(this).parent('.myHover').find('.icon-ok-sign').css("display", "inline-flex", "!important").click(function(e){
-
                             $(this).parent('.myHover').find('.icon-pencil').css('display', 'none');
                             $(this).parent('.myHover').find('.icon-pencil').css({"display":"none", "visibility":"hidden"}).fadeOut();
                             $(this).css('display', 'none', '!important');
@@ -123,6 +253,7 @@ $(document).ready(function (e) {
                                     }).done(function(response){
                                         if(response==="OK"){
                                             $("#message").html("Se ha actualizado").fadeIn("slow").delay(3000).fadeOut("slow");
+                                            $('.username').html(valor);
                                         }
                                         else{
                                             $('#message').html(response);
@@ -145,5 +276,6 @@ $(document).ready(function (e) {
     $('.datosPerfil').mouseleave(function(){
         $('.icon-pencil').css("display", "none");
     });
+    $('.textoPost').focus();
+    $('.textoPost').on('dragleave', function(e){return false;}).on('dragover', function(e){return false;}).on('drop', function(e){return false;});
 });
-

@@ -129,10 +129,10 @@ cursor: pointer;
   text-shadow: 0px 0px 4px #FFF;
 }
 .datosPerfil{
-  border: 1px solid purple;
+  border: 2px solid #551A50;
   min-height: 400px;
   padding: 20px;
-  width: 282px !important;
+  //width: 352px !important;
 }
 @media (max-width: 480px){
   .datosPerfil{
@@ -200,7 +200,7 @@ $termina: 12;
   margin-bottom: 5px;
 }
 .datosPerfil > .span12 > input[type="text"]{
-  width: 140px !important;
+  width: 215px !important;
   z-index: 9 !important;
   border: 0px solid #e5e5e5;
   background: #F2F2F2 !important;
@@ -209,5 +209,293 @@ $termina: 12;
   color: rgba(128, 0, 128, 0.6);
   display: none;
   position: absolute;
-  margin-left: -22px;
+  //margin-left: -22px;
+}
+.contenedorPost{
+  width:  710px;
+  background-color: #CCC;
+  margin: 0 auto !important;
+  margin-left: 5% !important;
+  padding: 10px;
+  border: 1px solid #551A50;
+  border-bottom: 5px solid #551A50;
+}
+.contenidoPost{
+  display: inline-flex;
+}
+.perfilPost{
+
+}
+
+.textoPost{
+  width: 560px !important;
+  margin-left: 10px;
+  background: #f2f2f2;
+  box-shadow: 0 0 1px rgba(0,0,0,0.6);
+  max-height: 80px;
+  min-height: 80px;
+  padding: 10px;
+  color: #686868;
+}
+.textoPost:focus{
+  outline: none !important;
+  border:0px solid black;
+  box-shadow: 0 0 1px rgba(0,0,0,1);
+  overflow-y: auto;
+}
+.botonesPost {
+  background: #551A50;
+  margin-left: -10px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  width: 709px;
+  padding: 10px 5px 5px;
+}
+.perfilPost > img{
+  cursor: pointer;
+  width: 80px !important;
+  height: 80px !important;
+  border: 3px solid rgba(255,255,255,0.6);
+}
+.botonesPost > div:first-child{
+  margin-right: 10px;
+}
+
+.botonesPost > div{
+  padding: 4px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  background: #551A50;
+  border-radius: 2px;
+  width: 49.2%;
+  color: #e5e5e5;
+}
+.botonesPost > div:hover{
+
+}
+.listasPosts{
+  margin-left: 25px;
+  width: 350px;
+  border: 2px solid #551A50;
+  padding: 20px;
+}
+.TituloUsuario{
+  background: #551A50;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  margin: -20px -20px 20px;
+}
+.botonSendPost{
+  background: #551A50;
+  width: 60px;
+  height: 80px;
+  color: #f2f2f2;
+  border: 1px solid #551A50;
+  padding-top: 26px !important;
+  padding-left: 16px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.botonSendPost:hover{
+  background: #8B2182;
+}
+#addPostElement{
+  background: #551A50;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #FFFFFF;
+  padding: 3px 10px 10px 14px;
+  font-size: 40px;
+  font-weight: 100;
+  font-family: initial;
+  box-shadow: 0 0 4px #000;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+#addPostElement:hover{
+  background: purple;
+}
+
+
+$empieza: 0;
+$termina: 100;
+@for $i from $empieza through $termina {
+  .margen-top-#{$i} { margin-top: #{$i}px !important;; }
+}
+@for $i from $empieza through $termina {
+  .margen-bottom-#{$i} { margin-bottom: #{$i}px !important;; }
+}
+@for $i from $empieza through $termina {
+  .margen-left-#{$i} { margin-left: #{$i}px !important;; }
+}
+@for $i from $empieza through $termina {
+  .margen-right-#{$i} { margin-right: #{$i}px !important; }
+}
+
+.dashedBorder{
+  border: 1px dashed #f2f2f2;
+  margin: -10px;
+  padding: 10px;
+}
+.imagesLoad > img{
+  border: 3px solid rgba(255,255,255,0.7);
+  margin-top: 10px;
+  padding: 3px;
+  width: 75px;
+  box-shadow: inset 0 0 10px #551A50;
+  height: 70px;
+  margin-right: 4px;
+  margin-bottom: 5px;
+}
+.imagesLoad{
+  display: inline-flex;
+  overflow-x: auto;
+}
+
+.imagePostPerfil{ border-radius: 50% !important; height: 43px;}
+
+.listImagesByPost{
+  display: inline-flex;
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 14px;
+}
+
+.listImagesByPost > img{
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  margin-right: 5px;
+}
+
+.hoverPicture{
+
+}
+.hoverPicture > img{
+  width: 100% !important;
+  max-height: 440px;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.fondoImageY > i{
+  display: none;
+}
+.fondoImageY:hover > i{
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  margin-left: 45%;
+  margin-top: 170px;
+  color: white;
+  font-size: 60px;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.hoverPicture:hover{
+  cursor: pointer;
+}
+.hoverPicture:hover > img{
+  box-shadow: inset 0 0 10px black;
+}
+.fondoImageY{
+  width: 98%;
+  height: 440px;
+  position: absolute;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.fondoImageY:hover{
+  width: 98%;
+  height: 440px;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+}
+
+
+
+.hoverPictureMultiple{
+  min-width: 100px !important;
+  cursor: pointer;
+}
+
+.hoverPictureMultiple > i{
+  display: none;
+}
+.hoverPictureMultiple:hover > i{
+  display: block;
+}
+
+
+.hoverPictureMultiple > i{
+  display: none;
+  position: relative;
+  top: 55px;
+  left: 40px !important;
+  color: #FFF;
+}
+
+
+.hoverPictureMultiple:first-child:hover{
+  margin-top: 0px;
+}
+
+.listImagesByPost:hover{
+  margin: 0 !important;
+}
+.hoverPictureMultiple:first-child > i{
+  position: absolute;
+}
+.hoverPictureMultiple:hover > i{
+  display: block;
+}
+.hoverPictureMultiple:hover > img{
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+
+  //filter: blur(3px) grayscale(1);
+  //-webkit-filter: blur(3px) grayscale(1);
+}
+.fondoBigImage{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 999999999999999999999999999999999999;
+}
+.listasPosts > img{
+  -webkit-box-shadow: inset 0 0 10px #551A50;
+  -moz-box-shadow: inset 0 0 10px #551A50;
+  box-shadow: inset 0 0 10px #551A50;
+  margin-bottom: 10px;
+}
+.addPostElement{
+  display: none;
 }

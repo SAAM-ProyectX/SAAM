@@ -30,6 +30,7 @@ function signUp(){
 function signIn(){
     var alias = $('#alias').val();
     var contrasena = $('#contrasena').val();
+    //alert(alias);
     $.ajax({
         type: "POST",
         url: urlx+"Usuario/signIn",

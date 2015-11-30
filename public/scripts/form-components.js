@@ -1,3 +1,4 @@
+var urlx = "http://www.saam.com/";
 var FormComponents = function () {
 
     var handleWysihtml5 = function () {
@@ -7,7 +8,7 @@ var FormComponents = function () {
 
         if ($('.wysihtml5').size() > 0) {
             $('.wysihtml5').wysihtml5({
-                "stylesheets": ["assets/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
+                "stylesheets": [urlx + "public/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
             });
         }
     }
@@ -19,7 +20,7 @@ var FormComponents = function () {
 
         if ($('.wysihtml5').size() > 0) {
             $('.wysihtml5').wysihtml5({
-                "stylesheets": ["assets/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
+                "stylesheets": [urlx + "public/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
             });
         }
     }

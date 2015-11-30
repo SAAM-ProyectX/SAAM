@@ -25,15 +25,16 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/plugins/select2/select2_metro.css" />
     <link rel="stylesheet" href="<?php echo URL; ?>public/plugins/data-tables/DT_bootstrap.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo URL; ?>public/img/favicon.png" />
 
     <link href="<?php echo URL; ?>public/css/ourstyles.css" rel="stylesheet" type="text/css"/>
-    <!--link href="<?php echo URL; ?>public/css/styleslogin.css" rel="stylesheet" type="text/css" />
+    <!--link href="<?php echo URL; ?>public/css/styleslogin.css" rel="stylesheet" type="text/css" />ddddddds
     <link href="<?php echo URL; ?>public/css/styleall.css" rel="stylesheet" type="text/css" /-->
+    <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+    <link href="<?php echo URL; ?>public/css/pages/timeline.css" rel="stylesheet" type="text/css"/>
     <script src="<?php echo URL; ?>public/plugins/jquery-1.10.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var codigox = <?php echo Session::getValue('U_DATA')["codigo"]; ?>;
-    </script>
+    <link href="<?php echo URL; ?>public/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+
 </head>
 <body class="page-header-fixed page-sidebar-closed">
 <div class="header navbar navbar-inverse navbar-fixed-top">
@@ -94,7 +95,6 @@
                         <li>
                             <p>Usted tiene 1 tarea pendiente.</p>
                         </li>
-
                         <li>
                             <a href="#">
 								<span class="task">
@@ -113,8 +113,8 @@
                 </li>
                 <li class="dropdown user">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img alt="" src="<?php echo URL; ?>public/img/usuarios/profile/1234.jpg" class="logoPerfil"/>
-                        <span class="username"><?php echo ucfirst(Session::getValue('U_NAME')); ?></span>
+                        <img alt="" src="<?php echo URL; ?>public/img/usuarios/profile/<?php echo Session::getValue('U_DATA')['codigo']; ?>.jpg" class="logoPerfil"/>
+                        <span class="username"><?php echo ucfirst(Session::getValue('U_DATA')['Nombre']); ?></span>
                         <i class="icon-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">

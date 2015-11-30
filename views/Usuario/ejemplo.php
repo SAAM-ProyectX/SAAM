@@ -9,7 +9,6 @@
             $val = Session::getValue('U_DATA')["Estado"];
             $estado = "";
             for($i = 1; $i < strlen($val); $i++){ $estado .= $val[$i]; }
-            Session::getValue('U_DATA')['Estado'] = $estado;
             ?>
             <div class="container-fluid">
                 <div id="dashboard">

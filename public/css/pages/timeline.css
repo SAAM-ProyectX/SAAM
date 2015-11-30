@@ -10,14 +10,16 @@ Timeline UI Base
 
 /* The line */
 .timeline:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 10px;
-	background: #ccc;
-	left: 20%;
-	margin-left: -10px;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #551A50;
+    left: -5px;
+    margin-left: -10px;
+    margin-top: 10px;
+    border-radius: 50px;
 }
 
 .timeline > li {
@@ -53,19 +55,19 @@ Timeline UI Base
 /* Right content */
 
 .timeline > li .timeline-body {
-	margin: 0 0 15px 25%;
-	color: #fff;
-	padding: 10px;
-	font-weight: 300;
-	position: relative;
-	border-radius: 5px;
+    margin: -10px 0px 15px 4%;
+    color: #fff;
+    padding: 10px;
+    font-weight: 300;
+    position: relative;
+    /* border-radius: 5px; */
 }
 
-.timeline > li .timeline-body h2 { 
-	margin-top: 0px;
-	padding: 0 0 5px 0;
-	border-bottom: 1px solid rgba(255,255,255,0.3);
-	font-size: 24px;
+.timeline > li .timeline-body h2 {
+    margin-top: 0px;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid rgb(85, 26, 80);
+    font-size: 24px;
 }
 
 .timeline > li .timeline-content { 
@@ -103,7 +105,8 @@ Timeline UI Base
 }
 
 .timeline > li .timeline-body .btn {
-  margin-top: 10px;
+  margin-top: 0px;
+    padding: 0 4px;
 }
 
 /* The triangle */
@@ -144,31 +147,32 @@ Timeline UI Base
 
 /* The icons */
 .timeline > li .timeline-icon {
-	width: 40px;
-	height: 40px;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	font-size: 1.4em;
-	line-height: 40px;
-	-webkit-font-smoothing: antialiased;
-	position: absolute;
-	color: #fff;
-	background: #aaa;  
-	border-radius: 50%;
-	box-shadow: 0 0 0 8px #ccc;
-	text-align: center;
-	left: 20%;
-	top: 0;
-	margin: 5px 0 0 -27px;
-	padding-bottom: 3px; 
-	padding-right: 1px;
-	padding-left: 2px;
-	-webkit-border-radius: 30px !important;
-	   -moz-border-radius: 30px !important;
-			border-radius: 30px !important;
+    width: 44px;
+    height: 40px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 1.4em;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #551A50;
+    background: #F2F2F2;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #551A50;
+    text-align: center;
+    left: 0%;
+    top: 0;
+    margin: 5px 0 0 -35px;
+    padding-bottom: 3px;
+    -webkit-border-radius: 30px !important;
+    -moz-border-radius: 30px !important;
+    border-radius: 30px !important;
+    box-sizing: content-box;
+    border: 3px solid #551A50;
+    box-shadow: inset 0 0 10px #551A50;
 }
 
 /* Red */
@@ -225,13 +229,15 @@ Timeline UI Base
 
 /* Purple */
 .timeline li.timeline-purple .timeline-body:after {
-	border-right-color: #852b99;
+	border-right-color: #551A50;
 }
 
 .timeline li.timeline-purple .timeline-body {
-	 background: #852b99;
+    background: #F2F2F2;
+    box-shadow: inset 0px 0px 10px #551A50;
+    border: 2px solid #551A50;
+    color: #551A50;
 }
-
 .timeline li.timeline-purple .timeline-time span.time {
 	 color: #852b99; 
 }
@@ -248,7 +254,18 @@ Timeline UI Base
 .timeline li.timeline-grey .timeline-time span.time {
 	 color: #555555; 
 }
-
+.timeline-footer{
+    background: #551A50;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 10px;
+    padding: 5px;
+    color: #f2f2f2;
+    font-size: 12px;
+}
+.timeline-footer > span {
+    position: absolute; right: 10px; }
 @media (max-width: 767px) {  
 	timeline > li .timeline-time span.time {
 		font-size: 18px;
@@ -284,7 +301,8 @@ Timeline UI Base
 		float: right;
 		left: auto;
 		margin: -55px 5px 0 0px;
-	}	
+        border-radius: 50%;
+	}
 
 	/*colors*/
 
@@ -319,4 +337,3 @@ Timeline UI Base
 		border-bottom-color: #555555;
 	}
 }
-

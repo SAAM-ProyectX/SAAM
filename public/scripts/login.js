@@ -1,5 +1,7 @@
+$(document).ready(function(){
+   $("#alias").focus();
+});
 var Login = function () {
-    
     return {
         //main function to initiate the module
         init: function () {
@@ -55,7 +57,7 @@ var Login = function () {
 	        $('.login-form input').keypress(function (e) {
 	            if (e.which == 13) {
 	                if ($('.login-form').validate().form()) {
-	                    window.location.href = "index.html";
+                        signIn();
 	                }
 	                return false;
 	            }
@@ -72,7 +74,6 @@ var Login = function () {
 	                    email: true
 	                }
 	            },
-
 	            messages: {
 	                email: {
 	                    required: "Email is required."

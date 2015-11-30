@@ -26,12 +26,14 @@ Login page
 }
 
 .login .content h3 {
-  color: #000;
+  color: #652C90;
 }
 .login .content h4  {
   color: #555;
 }
-
+.form-actions{
+    color: #652C90;
+}
 .login .content p {
   color: #222;
 }
@@ -48,7 +50,7 @@ Login page
 }
 
 .login .content .input-icon {
-  border-left: 2px solid #35aa47 !important;
+    border-left: 2px solid #652C90 !important;
 }
 
 .login .content .control-group {
@@ -151,4 +153,8 @@ Login page
   .login .checkbox {
     font-size: 13px;
   }
+}
+.forget-password > h5{
+    color: #742894 !important;
+    text-decoration: none;
 }

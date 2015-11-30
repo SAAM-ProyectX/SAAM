@@ -121,6 +121,13 @@ var App = function () {
                     clearTimeout(resize);
                 }   
                 resize = setTimeout(function() {
+                    var x = window.location.pathname;
+                    //   /Usuario/perfil
+
+                    console.log(x);
+                    if (($(window).width() > 980) && (x='/Usuario/perfil')) {
+                        $('body').addClass("page-sidebar-closed");
+                    }
                     console.log('resize');
                     handleResponsive();    
                 }, 50); // wait 50ms until window resize finishes.

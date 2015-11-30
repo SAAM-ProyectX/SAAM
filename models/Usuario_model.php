@@ -10,9 +10,6 @@
             //return $this->db->select($fields,'usuarios',$where);
             return $this->db->select("SELECT * FROM Usuario WHERE Alias = :alias", $data);
         }
-        /*function getUser($id){
-            return $this->db->select("SELECT * FROM Users WHERE id_Users = :id", array(":id"=>$id));
-        }*/
         function update($id, $data){
             print ($this->db->update("usuarios", $data, "id =".$id));
         }
@@ -27,5 +24,26 @@
         }
         function updateelement($TableName, $data){
            return $this->db->updateUserData($TableName, $data);
+        }
+        function insertarPost($data){
+            return $this->db->procedure_IUD('insertar_post', $data);
+        }
+        function Post_por_usuario($data){
+            return $this->db->procedure_S('Post_por_usuario', $data);
+        }
+        function getIDPublicacion($data){
+            return $this->db->procedure_S('getIDPublicacion', $data);
+        }
+        function setImageinDB($data){
+            return $this->db->procedure_IUD('setFotosinDB', $data);
+        }
+        function getIDPhotos($data){
+            return $this->db->procedure_S('getIDPhotos', $data);
+        }
+        function setFotosinDBHAS($data){
+            return $this->db->procedure_IUD('setFotosinDBHAS', $data);
+        }
+        function getallImages($data){
+            return $this->db->procedure_S('getallImages', $data);
         }
     }
